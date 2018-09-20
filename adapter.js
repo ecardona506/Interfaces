@@ -61,4 +61,12 @@ function calcIVA()
 		console.log("Valor neto: ",neto);
 	}
 	if(price == "euro")
+	{
+		conversion = converter() / 3561.16;
+		iva = conversion * (21/100);
+		neto = conversion + iva;
+		console.log("Precio original: ",original);
+		console.log("IVA: ",iva);
+		console.log("Valor neto: ",neto);
+	}
 }

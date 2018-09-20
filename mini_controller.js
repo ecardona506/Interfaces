@@ -20,9 +20,10 @@ function getValueCoin()
 
 function buildPaella() 
 {
-	var factory = executeFactory(this.paellaType.value);
-	//var paellaProduct = generatePaella(factory.type);
+	var factory = new executeFactory(this.paellaType.value);
+	var paellaProduct = new generatePaella(factory.type);
 	var buildCar = new buildShoppingCar(this.paellaType.value);
 	var decorator = new executeDecorator(menuItems);
+	var adapter= new converter();
 	return decorator;
 }

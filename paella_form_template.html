@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="Factory_Method.js"></script>
 	<script type="text/javascript" src="composite.js"></script>
 	<script type="text/javascript" src="decorator.js"></script>
+	<script type="text/javascript" src="adapter.js"></script>
 	<title>Restaurante Javeriana</title>
 	
 </head>
@@ -20,17 +21,43 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<h1 style="text-align: center; margin-top: 50px;">Restaurante Javeriana</h1>
-				<h3 style="text-align: center;"">Menú especial</h3>
-				<form>
+				<h3 style="text-align: center">Menú especial</h3>
+				
+					</div>
+			<div class="col-md-2"></div>
+		</div>
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-3">
+			<form>
 					<div class="form-group">
 						<label for="selectControl">Paella</label>
 						<select multiple class="form-control" id="paellaType" onchange="getValueType(this)">
 					      <option value ="Mariscos" onclick="buildPaella()">Mariscos</option>
 					      <option value="Vegetariana" onclick="buildPaella()">Vegetariana</option>
 					      <option value="CarnePollo" onclick="buildPaella()">Carne y pollo</option>
-					    </select>
-					</div>
-					<div class="form-group">
+					</select>
+			</form>
+		</div>
+		</div>
+
+		<div class="col-md-3">
+			
+					    <form action="/action_page.php">
+  						<input type="checkbox" name="Mariscos" value="Mariscos"> Mariscos<br>
+  						<input type="checkbox" name="Vegetariana" value="Vegetariana"> Vegetariana<br>
+  						<input type="checkbox" name="CarnePollo" value="CarnePollo"> Carne y pollo<br>
+  						</form>
+		</div>
+		<div class="col-md-3">
+			<input type="text" name="text-paellas" id="text-paellas" placeholder="Mariscos. Vegetariana, Carne y pollo">
+		</div>
+		<div class="col-md-1"></div>
+	</div>	
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class="form-group">
 					<label for="selectControl">Moneda</label>
 					</div>
 					<input type="text" name="precio" id="precio" placeholder="Dolar, Euro, etc.">
@@ -42,12 +69,6 @@
 					      <option value="50000">$50.000 grande</option>
 					    </select>
 					</div>
-					<label for="selectControl">Tipo de paella</label><br>
-					<form action="/action_page.php">
-  						<input type="checkbox" name="Mariscos" value="Mariscos"> Mariscos<br>
-  						<input type="checkbox" name="Vegetariana" value="Vegetariana"> Vegetariana<br>
-  						<input type="checkbox" name="CarnePollo" value="CarnePollo"> Carne y pollo<br>
-					</form>
 					<div class="form-group">
 						<span class="input-group-text" id="basic-addon3"><b>Todos los platos contienen:</b> <i>Ensalada tropical</i></span>
 					</div>
@@ -57,8 +78,9 @@
 					</div>
 				</form>
 			</div>
-			<div class="col-md-2"></div>
 		</div>
-	</div>	
+		<div class="col-md-2"></div>
+	</div>			
+
 </body>
 </html>

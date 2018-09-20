@@ -22,6 +22,7 @@ function paellaFactoryMethod()
 			return paellaMariscos;
 	}
 }
+
 function generatePaella(type)
 {
 	var paellaMethod = new paellaFactoryMethod();

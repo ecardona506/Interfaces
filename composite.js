@@ -13,7 +13,6 @@ function shoppingCar(typePaella)
         arrayElements.push(product);
         return arrayElements;
         },
-
         remove: function (product)
         {
         arrayElements.split(0, this.arrayElements.length);
